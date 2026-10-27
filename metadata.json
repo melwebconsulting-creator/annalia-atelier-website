@@ -1,0 +1,6 @@
+{
+  "name": "Annalia Atelier — Private Nail Studio & Artistry",
+  "description": "Luxury minimalist nail studio by Annalia Atelier in Mississauga & Greater Toronto. Bespoke Gel-X enhancements, structured manicures, glazed chrome, and curated editorial nail art.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
