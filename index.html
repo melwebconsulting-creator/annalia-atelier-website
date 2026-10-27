@@ -18,9 +18,1048 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Pure Standalone Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#FDFBF7] text-[#2C221E] antialiased selection:bg-[#E8DCD4] selection:text-[#2C221E]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body>
+    <!-- ======================================================================
+         1. Header (3-Zone Top Bar Contract)
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <!-- Zone 1: Wordmark -->
+        <a href="#" class="brand-wordmark">Annalia Atelier</a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#policies" class="nav-link">Studio Policies</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Primary CTA & Mobile Toggle -->
+        <div class="header-action">
+          <a href="#booking" class="btn-primary">Book Appointment</a>
+
+          <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobileDrawer" class="mobile-drawer">
+        <ul class="mobile-nav-list">
+          <li><a href="#services">Services & Pricing</a></li>
+          <li><a href="#portfolio">Lookbook Portfolio</a></li>
+          <li><a href="#about">The Artist & Philosophy</a></li>
+          <li><a href="#policies">Studio Policies</a></li>
+          <li><a href="#contact">Contact & Location</a></li>
+        </ul>
+        <div class="mobile-drawer-actions">
+          <a href="#booking" class="btn-primary" style="width: 100%; text-align: center;">Book Appointment</a>
+          <a href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" class="btn-secondary js-booking-link" style="width: 100%; text-align: center;">
+            <span>Direct Beacons Link</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ======================================================================
+           2. Hero Section
+           ====================================================================== -->
+      <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="container hero-grid">
+          <!-- Left Column -->
+          <div class="hero-content">
+            <div class="unboxed-meta">
+              <span>Mississauga, ON</span>
+              <span class="separator">·</span>
+              <span>Private Studio</span>
+              <span class="separator">·</span>
+              <span>By Appointment Only</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Elevated nail artistry & bespoke Gel-X care.
+            </h1>
+
+            <p class="hero-description">
+              An intimate private studio experience in Mississauga & the Greater Toronto Area. Dedicated to pristine Russian cuticle prep, healthy natural nail growth, and curated editorial designs.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#booking" class="btn-primary">Book an Appointment</a>
+              <a href="#services" class="btn-secondary">Explore Services & Rates</a>
+            </div>
+
+            <div class="hero-strip">
+              <div class="strip-item">
+                <h4>Apres Gel-X</h4>
+                <p>Damage-free extensions</p>
+              </div>
+              <div class="strip-item">
+                <h4>Russian Prep</h4>
+                <p>Flawless dry cuticle care</p>
+              </div>
+              <div class="strip-item">
+                <h4>1-on-1 Studio</h4>
+                <p>Private client focus</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Hero Visual -->
+          <div class="hero-image-wrap">
+            <div class="hero-image-frame">
+              <img
+                src="assets/images/hero_nail_artistry_1793074977263.jpg"
+                alt="Glazed chrome French tip nail artistry by Annalia Atelier"
+                loading="eager"
+              />
+              <div class="hero-image-scrim">
+                <div class="scrim-flex">
+                  <div>
+                    <div class="scrim-title">Signature Glazed Chrome French</div>
+                    <div class="scrim-sub">Medium Almond Gel-X Enhancement</div>
+                  </div>
+                  <div class="scrim-brand">Annalia Atelier</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-badge">
+              <div class="badge-label">Studio Standard</div>
+              <div class="badge-text">
+                Hospital-grade sanitation & medical autoclave sterilization.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           3. Services Section & Set Estimator
+           ====================================================================== -->
+      <section id="services" class="section bg-ivory">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="section-header-row">
+            <div>
+              <div class="section-eyebrow">Menu & Offerings</div>
+              <h2 class="section-title">Curated Services & Investment</h2>
+            </div>
+            <div>
+              <button id="toggleEstimatorBtn" class="btn-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                <span>Interactive Set Estimator</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Owner Price Placeholder Notice -->
+          <div class="notice-banner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: #BAA99E"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <div>
+              <strong>Owner Note:</strong> All prices shown are estimated starting rates and represent placeholder values until officially finalized by Annalia Atelier. Final rates may vary based on customized nail length, custom hand-painted complexity, and individual consultation.
+            </div>
+          </div>
+
+          <!-- Interactive Set Price Estimator Card (Toggleable) -->
+          <div id="estimatorCard" class="estimator-card">
+            <div class="estimator-header">
+              <div>
+                <h3 class="estimator-title">Custom Set Price Estimator</h3>
+                <p style="font-size: 0.78rem; color: var(--color-muted); margin-top: 0.2rem;">
+                  Combine your desired base foundation and nail art complexity for a real-time studio estimate.
+                </p>
+              </div>
+              <div class="estimator-total-wrap">
+                <div class="estimator-total-label">Estimated Total</div>
+                <div id="estimatorTotalDisplay" class="estimator-total-val tabular-nums">$115 CAD</div>
+              </div>
+            </div>
+
+            <div class="estimator-grid">
+              <!-- Column 1: Base -->
+              <div>
+                <div class="estimator-col-label">1. Base Service</div>
+                <div class="radio-pill-group">
+                  <label class="radio-choice selected">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_base" value="95" data-service-id="gel-x-full-set" checked>
+                      <span>Apres Gel-X Full Set</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">$95</span>
+                  </label>
+                  <label class="radio-choice">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_base" value="80" data-service-id="structured-gel-mani">
+                      <span>Structured Gel Manicure</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">$80</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Column 2: Art Tier -->
+              <div>
+                <div class="estimator-col-label">2. Nail Art Level</div>
+                <div class="radio-pill-group">
+                  <label class="radio-choice">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_art" value="0">
+                      <span>Solid Single Color (No Art)</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">+$0</span>
+                  </label>
+                  <label class="radio-choice selected">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_art" value="20" checked>
+                      <span>Tier I: Minimalist / French</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">+$20</span>
+                  </label>
+                  <label class="radio-choice">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_art" value="35">
+                      <span>Tier II: Chrome & Swirls</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">+$35</span>
+                  </label>
+                  <label class="radio-choice">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="radio" name="estimator_art" value="50">
+                      <span>Tier III: Bespoke 3D Art</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">+$50</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Column 3: Add-on & Book -->
+              <div>
+                <div class="estimator-col-label">3. Care & Soak-Off</div>
+                <div class="radio-pill-group" style="margin-bottom: 1.25rem;">
+                  <label class="radio-choice">
+                    <span style="display: flex; align-items: center; gap: 0.5rem;">
+                      <input type="checkbox" id="estimatorRemoval">
+                      <span>Gentle Gel-X Soak-Off</span>
+                    </span>
+                    <span class="price-indicator tabular-nums">+$25</span>
+                  </label>
+                </div>
+                <button id="bookConfiguredSetBtn" class="btn-primary" style="width: 100%; text-align: center;">
+                  Book Configured Set
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Cards Grid -->
+          <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+              <div>
+                <div class="service-meta-top">
+                  <span class="duration-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>1h 45m</span>
+                  </span>
+                  <span class="category-tag">Signature Soft-Gel</span>
+                </div>
+                <h3 class="service-name">Apres Gel-X Full Set</h3>
+                <div class="service-price-wrap">
+                  <span class="service-price tabular-nums">$95 CAD</span>
+                  <span class="service-price-note">starting rate</span>
+                </div>
+                <p class="service-desc">
+                  Lightweight full-cover soft gel tips custom sized to each natural nail bed. Includes comprehensive cuticle dry prep, shaping, reinforcement, and solid gel finish.
+                </p>
+                <ul class="feature-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Tailored nail sizing & apex balance</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Gentle Russian-style dry manicure prep</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Non-damaging soft gel adhesion</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="recommended-box">
+                  Best for: Those desiring durable length and natural flexibility without acrylic damage.
+                </div>
+                <button class="card-action-btn js-select-service" data-service-id="gel-x-full-set">
+                  Select & Request Date
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+              <div>
+                <div class="service-meta-top">
+                  <span class="duration-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>1h 30m</span>
+                  </span>
+                  <span class="category-tag">Natural Overlay</span>
+                </div>
+                <h3 class="service-name">Structured Gel Manicure</h3>
+                <div class="service-price-wrap">
+                  <span class="service-price tabular-nums">$80 CAD</span>
+                  <span class="service-price-note">starting rate</span>
+                </div>
+                <p class="service-desc">
+                  High-viscosity builder gel applied directly over natural nails to build a seamless apex and allow brittle nails to grow long, resilient, and healthy.
+                </p>
+                <ul class="feature-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Reinforces thin, bendable, or peeling nails</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Flawless cuticle clearance and contouring</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Promotes 3–4 weeks growth retention</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="recommended-box">
+                  Best for: Clients growing out their natural nails who want chip-free strength.
+                </div>
+                <button class="card-action-btn js-select-service" data-service-id="structured-gel-mani">
+                  Select & Request Date
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+              <div>
+                <div class="service-meta-top">
+                  <span class="duration-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>30m</span>
+                  </span>
+                  <span class="category-tag">Restoration Care</span>
+                </div>
+                <h3 class="service-name">Gentle Gel-X Soak-Off & Care</h3>
+                <div class="service-price-wrap">
+                  <span class="service-price tabular-nums">$25 CAD</span>
+                  <span class="service-price-note">stand-alone rate</span>
+                </div>
+                <p class="service-desc">
+                  Gentle e-file debulking followed by pure acetone foil wrap or oil soak-off. Completed with keratin cuticle conditioning. Free with new full set.
+                </p>
+                <ul class="feature-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Preserves natural keratin nail plates</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>No prying or scraping with metal tools</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Includes nourishing cuticle oil treatment</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="recommended-box">
+                  Best for: Clients with existing Annalia sets needing a clean reset.
+                </div>
+                <button class="card-action-btn js-select-service" data-service-id="gel-removal-care">
+                  Select & Request Date
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nail Art Tiers Strip -->
+          <div class="tiers-container">
+            <div class="tiers-heading-wrap">
+              <div class="section-eyebrow">Customization Menu</div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--color-espresso); margin-top: 0.2rem;">
+                Nail Art Add-Ons & Design Tiers
+              </h3>
+              <p style="font-size: 0.825rem; color: var(--color-muted); margin-top: 0.25rem;">
+                Add-ons are paired with any Gel-X Full Set or Structured Manicure. Design ideas and reference photos can be sent in advance.
+              </p>
+            </div>
+
+            <div class="tiers-grid">
+              <div class="tier-card">
+                <div>
+                  <div class="tier-header">
+                    <span class="tier-code">Tier I Art</span>
+                    <span class="tier-rate tabular-nums">+$20 CAD</span>
+                  </div>
+                  <h4 class="tier-title">Minimalist & French</h4>
+                  <p class="tier-desc">
+                    Understated elegance. Includes micro French tips, glazed pearlescent chrome powder, aura airbrush effects, or clean geometric dots.
+                  </p>
+                </div>
+                <div class="tier-footer">
+                  <span>Duration</span>
+                  <span class="font-mono">+20 min</span>
+                </div>
+              </div>
+
+              <div class="tier-card">
+                <div>
+                  <div class="tier-header">
+                    <span class="tier-code">Tier II Art</span>
+                    <span class="tier-rate tabular-nums">+$35 CAD</span>
+                  </div>
+                  <h4 class="tier-title">Fluid Chrome & Swirls</h4>
+                  <p class="tier-desc">
+                    Textured molten silver/gold chrome swirls, Japanese tortoiseshell, celestial stars, or two-tone layered modern French designs.
+                  </p>
+                </div>
+                <div class="tier-footer">
+                  <span>Duration</span>
+                  <span class="font-mono">+35 min</span>
+                </div>
+              </div>
+
+              <div class="tier-card">
+                <div>
+                  <div class="tier-header">
+                    <span class="tier-code">Tier III Art</span>
+                    <span class="tier-rate tabular-nums">+$50 CAD</span>
+                  </div>
+                  <h4 class="tier-title">Bespoke 3D Artistry</h4>
+                  <p class="tier-desc">
+                    Complex custom nail artistry. Intricate hand-painted illustrations, 3D water droplets, encapsulated charms, multi-layered mixed media.
+                  </p>
+                </div>
+                <div class="tier-footer">
+                  <span>Duration</span>
+                  <span class="font-mono">+50 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           4. Portfolio Section
+           ====================================================================== -->
+      <section id="portfolio" class="section">
+        <div class="container">
+          <div class="center-heading">
+            <div class="section-eyebrow">Selected Works</div>
+            <h2 class="section-title">Artistry & Lookbook</h2>
+            <p class="section-subtitle">
+              Handcrafted Gel-X extensions and structured gel creations from our private Mississauga studio.
+            </p>
+          </div>
+
+          <!-- Filter Bar (Segmented Control) -->
+          <div class="filter-bar">
+            <div class="segmented-control" role="tablist">
+              <button class="filter-btn active js-filter-btn" data-category="all">All Sets</button>
+              <button class="filter-btn js-filter-btn" data-category="french">French & Micro-Tips</button>
+              <button class="filter-btn js-filter-btn" data-category="minimalist">Minimalist & Nude</button>
+              <button class="filter-btn js-filter-btn" data-category="chrome">Glazed Chrome</button>
+              <button class="filter-btn js-filter-btn" data-category="custom-3d">Bespoke 3D Art</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Portfolio Grid -->
+          <div id="portfolioGrid" class="portfolio-grid">
+            <!-- Cards populated dynamically via script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           5. About Section
+           ====================================================================== -->
+      <section id="about" class="section bg-ivory">
+        <div class="container about-grid">
+          <!-- Studio Photo -->
+          <div>
+            <div class="about-img-frame">
+              <img
+                src="assets/images/atelier_studio_space_1793074980459.jpg"
+                alt="Annalia Atelier minimalist boutique studio desk"
+                loading="lazy"
+              />
+              <div class="about-img-foot">
+                <div class="section-eyebrow" style="margin-bottom: 0.15rem;">The Studio Space</div>
+                <div style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-espresso);">
+                  Private 1-on-1 setting in Mississauga, ON
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative -->
+          <div>
+            <div class="section-eyebrow">The Artist & Philosophy</div>
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">
+              Thoughtful artistry focused on nail health and quiet luxury.
+            </h2>
+
+            <div class="about-prose">
+              <p>
+                Founded by Annalia in Mississauga, Ontario, <strong>Annalia Atelier</strong> was built to redefine the salon experience into an intentional, unhurried 1-on-1 sanctuary.
+              </p>
+              <p>
+                As an independent nail technician, content creator, and educator, Annalia documents her real nail journey and shares transparent guidance with a growing beauty community. With a focus on gentle Russian-style dry manicure techniques and authentic Apres Gel-X systems, every set balances long-term natural nail preservation with pristine, editorial finish work.
+              </p>
+              <p>
+                Whether you are seeking clean micro-French tips, glowing glazed chrome, or bespoke hand-sculpted 3D details, every appointment is custom-tailored to your hands, style, and natural nail anatomy.
+              </p>
+            </div>
+
+            <div class="principles-grid">
+              <div class="principle-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <h4>Health-First Foundations</h4>
+                  <p>No harsh mechanical scraping or aggressive filing on bare natural nail beds.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <h4>Premium Japanese & Korean Gels</h4>
+                  <p>High-purity formulas and gentle soak-off flexibility curated from trusted partners.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <h4>Industry Educator & Author</h4>
+                  <p>Author of <em>The Fully Booked Blueprint</em>, providing business guidance to fellow nail techs.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <h4>Private & Relaxing</h4>
+                  <p>A calm, one-on-one session with no chaotic multi-chair salon rush.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           6. Booking Section & Demo Inquiry Form
+           ====================================================================== -->
+      <section id="booking" class="section">
+        <div class="container booking-wrap">
+          <div class="center-heading">
+            <div class="section-eyebrow">Reserve Your Session</div>
+            <h2 class="section-title">Appointment Request & Inquiries</h2>
+            <p class="section-subtitle">
+              Plan your next bespoke nail set. Appointments are scheduled exclusively 1-on-1 for personalized attention.
+            </p>
+          </div>
+
+          <!-- Header Bar with Direct Link & Settings -->
+          <div class="booking-header-bar">
+            <div class="bar-left">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <div class="bar-text">
+                <strong>Demo Notice:</strong> This form is an interactive prototype for testing. You can submit to preview a complete client inquiry summary, or visit Annalia's live booking portal directly.
+              </div>
+            </div>
+
+            <div class="bar-actions">
+              <a href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" class="btn-primary js-booking-link">
+                <span>Direct Link</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <button id="openSettingsBtn" class="btn-icon" title="Configure Destination URL" aria-label="Configure Booking Destination">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Form Box -->
+          <div class="booking-form-box">
+            <form id="bookingForm">
+              <!-- Contact Details -->
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label class="form-label" for="bookingName">Full Name *</label>
+                  <input type="text" id="bookingName" class="form-input" placeholder="e.g. Julia Vance" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bookingEmail">Email Address *</label>
+                  <input type="email" id="bookingEmail" class="form-input" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bookingInstagram">Instagram Handle</label>
+                  <input type="text" id="bookingInstagram" class="form-input" placeholder="@yourhandle">
+                </div>
+              </div>
+
+              <!-- Service & Condition -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="bookingServiceSelect">Selected Service *</label>
+                  <select id="bookingServiceSelect" class="form-select">
+                    <option value="gel-x-full-set">Apres Gel-X Full Set ($95 CAD)</option>
+                    <option value="structured-gel-mani">Structured Gel Manicure ($80 CAD)</option>
+                    <option value="gel-removal-care">Gentle Gel-X Soak-Off ($25 CAD)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bookingNailState">Current Nail State *</label>
+                  <select id="bookingNailState" class="form-select">
+                    <option value="Bare natural nails">Bare natural nails (Ready for full set)</option>
+                    <option value="Existing Gel-X by Annalia Atelier">Existing Gel-X by Annalia Atelier (Soak-off)</option>
+                    <option value="Natural nails with simple gel">Natural nails with simple gel</option>
+                  </select>
+                  <div class="form-helper">Foreign acrylic / dip powder soak-offs are not accepted.</div>
+                </div>
+              </div>
+
+              <!-- Shape & Length Preference -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label">Preferred Nail Shape</label>
+                  <div class="btn-group-row">
+                    <button type="button" class="select-btn js-shape-btn selected" data-shape="Almond">Almond</button>
+                    <button type="button" class="select-btn js-shape-btn" data-shape="Squoval">Squoval</button>
+                    <button type="button" class="select-btn js-shape-btn" data-shape="Square">Square</button>
+                    <button type="button" class="select-btn js-shape-btn" data-shape="Oval">Oval</button>
+                    <button type="button" class="select-btn js-shape-btn" data-shape="Coffin">Coffin</button>
+                    <button type="button" class="select-btn js-shape-btn" data-shape="Natural">Natural</button>
+                  </div>
+                  <input type="hidden" id="hiddenShapeInput" value="Almond">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Preferred Length</label>
+                  <div class="btn-group-row">
+                    <button type="button" class="select-btn js-length-btn" data-length="Natural">Natural</button>
+                    <button type="button" class="select-btn js-length-btn" data-length="Short">Short</button>
+                    <button type="button" class="select-btn js-length-btn selected" data-length="Medium">Medium</button>
+                    <button type="button" class="select-btn js-length-btn" data-length="Long">Long</button>
+                  </div>
+                  <input type="hidden" id="hiddenLengthInput" value="Medium">
+                </div>
+              </div>
+
+              <!-- Date & Slot -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="bookingDate">Desired Date (Tue – Sat)</label>
+                  <input type="date" id="bookingDate" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bookingTime">Preferred Time Slot</label>
+                  <select id="bookingTime" class="form-select">
+                    <option value="Morning (10:00 AM – 1:00 PM)">Morning (10:00 AM – 1:00 PM)</option>
+                    <option value="Afternoon (1:00 PM – 4:00 PM)" selected>Afternoon (1:00 PM – 4:00 PM)</option>
+                    <option value="Late Afternoon (4:00 PM – 7:00 PM)">Late Afternoon (4:00 PM – 7:00 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Design Notes -->
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label class="form-label" for="bookingArtNotes">Design Inspiration & Notes</label>
+                <textarea id="bookingArtNotes" class="form-textarea" rows="3" placeholder="Describe your design vision (e.g. micro French with glazed chrome, milky nude base, reference photo on IG)..."></textarea>
+              </div>
+
+              <!-- Footer Row -->
+              <div class="form-footer-row">
+                <div class="form-policy-note">
+                  Deposit terms apply upon consultation confirmation.
+                </div>
+                <button type="submit" class="btn-primary">
+                  <span>Submit Inquiry (Demo Preview)</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           7. Policies, Brand Affiliates & Contact
+           ====================================================================== -->
+      <section id="policies" class="section bg-ivory">
+        <div class="container">
+          <!-- Policies -->
+          <div class="section-header-row" style="margin-bottom: 2rem;">
+            <div>
+              <div class="section-eyebrow">Client Experience</div>
+              <h2 class="section-title">Studio Policies & Etiquette</h2>
+              <p class="section-subtitle">
+                To ensure every client receives an unhurried, meticulous appointment, we kindly ask you to review our private studio standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="policies-grid">
+            <div class="policy-card">
+              <div class="policy-card-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3 class="policy-title">Arrival & Bare Nails Etiquette</h3>
+              </div>
+              <div class="policy-summary">Please arrive with bare natural nails unless you booked a soak-off.</div>
+              <div class="policy-details">
+                To preserve nail integrity and schedule accuracy, we do not soak off foreign MMA acrylic or dip powder applied elsewhere. If you have existing Gel-X done by Annalia Atelier, please select the removal option when scheduling.
+              </div>
+            </div>
+
+            <div class="policy-card">
+              <div class="policy-card-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3 class="policy-title">Booking Deposit & Confirmation</h3>
+              </div>
+              <div class="policy-summary">A nominal deposit is required to reserve your private window.</div>
+              <div class="policy-details">
+                Deposits are credited directly toward your total service fee on the day of your appointment. Your booking is confirmed once the deposit receipt is received.
+              </div>
+            </div>
+
+            <div class="policy-card">
+              <div class="policy-card-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3 class="policy-title">24-Hour Rescheduling Notice</h3>
+              </div>
+              <div class="policy-summary">We respectfully request at least 24 hours notice for any changes.</div>
+              <div class="policy-details">
+                As a private 1-on-1 studio, appointment slots are held exclusively for you. Rescheduling with 24h notice allows your deposit to roll over to a new date once.
+              </div>
+            </div>
+
+            <div class="policy-card">
+              <div class="policy-card-top">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3 class="policy-title">Hygiene & Clinical Sterilization</h3>
+              </div>
+              <div class="policy-summary">Hospital-grade autoclaved implements and disposable files.</div>
+              <div class="policy-details">
+                Your health and safety is paramount. All metal bits and cuticle tools undergo medical-grade disinfectant and sterilization between every client.
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand Affiliates & Perks -->
+          <div class="section-header-row" style="margin-bottom: 2rem;">
+            <div>
+              <div class="section-eyebrow">Trusted Products & Partners</div>
+              <h2 class="section-title">Partner Perks & Affiliates</h2>
+              <p class="section-subtitle">
+                Professional nail supplies and products trusted in the atelier, featured on our Beacons page.
+              </p>
+            </div>
+          </div>
+
+          <div class="affiliates-grid">
+            <div class="affiliate-card">
+              <div>
+                <div class="affiliate-badge">Affiliate Partner</div>
+                <h3 class="affiliate-name">Sweetie Nail Supply</h3>
+                <p class="affiliate-desc">
+                  Official affiliate partner for premium Japanese and Korean gel products, professional brushes, and studio essentials.
+                </p>
+                <div class="affiliate-perk">
+                  Special discount on professional Asian gel brands & nail care tools.
+                </div>
+              </div>
+              <div class="code-row">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.72rem; color: var(--color-muted);">Promo Code:</span>
+                  <span class="code-pill">ANNALIA</span>
+                </div>
+                <button class="btn-copy js-copy-code" data-code="ANNALIA">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="affiliate-card">
+              <div>
+                <div class="affiliate-badge">Brand Ambassador</div>
+                <h3 class="affiliate-name">Bright Rainbow Nails</h3>
+                <p class="affiliate-desc">
+                  Curated selection of quality nail art accessories, charms, and specialized enhancement supplies.
+                </p>
+                <div class="affiliate-perk">
+                  Exclusive creator code for studio clients and fellow nail techs.
+                </div>
+              </div>
+              <div class="code-row">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.72rem; color: var(--color-muted);">Promo Code:</span>
+                  <span class="code-pill">ANNALIA10</span>
+                </div>
+                <button class="btn-copy js-copy-code" data-code="ANNALIA10">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Card -->
+          <div id="contact" class="contact-banner">
+            <div class="contact-grid">
+              <div>
+                <div class="section-eyebrow">Connect & Inquire</div>
+                <h2 class="section-title" style="margin-bottom: 0.75rem;">Visit Annalia Atelier</h2>
+                <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.6;">
+                  Private studio address and access details are provided upon appointment confirmation. For custom press inquiries, tutorial collaborations, or general questions, connect via Instagram or Beacons.
+                </p>
+
+                <div class="contact-meta-list">
+                  <div class="contact-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Mississauga, Ontario (Greater Toronto Area)</span>
+                  </div>
+                  <div class="contact-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Tuesday – Saturday (By Appointment Only)</span>
+                  </div>
+                  <div class="contact-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <a href="https://instagram.com/annalia.atelier" target="_blank" rel="noopener noreferrer" style="font-weight: 500; text-decoration: underline;">
+                      @annalia.atelier (Direct Messaging)
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-buttons-col">
+                <a href="https://instagram.com/annalia.atelier" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-align: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span>Follow @annalia.atelier</span>
+                </a>
+                <a href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" class="btn-secondary js-booking-link" style="text-align: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  <span>Official Beacons Link-in-Bio</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================================================
+         8. Footer
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="#" class="footer-brand">Annalia Atelier</a>
+            <p class="footer-desc">
+              Private 1-on-1 nail studio in Mississauga & Greater Toronto. Dedicated to healthy natural nail care, Apres Gel-X, and bespoke editorial nail artistry.
+            </p>
+            <div class="footer-social-links">
+              <a href="https://instagram.com/annalia.atelier" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>Instagram</span>
+              </a>
+              <span style="color: #5C524B">·</span>
+              <a href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" class="js-booking-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                <span>Beacons Link-in-Bio</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Explore Atelier</h4>
+            <ul class="footer-links-list">
+              <li><a href="#services">Services & Pricing</a></li>
+              <li><a href="#portfolio">Lookbook Portfolio</a></li>
+              <li><a href="#about">The Artist & Philosophy</a></li>
+              <li><a href="#policies">Studio Policies & Etiquette</a></li>
+              <li><a href="#booking">Appointment Inquiries</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Studio Location</h4>
+            <div class="footer-location-info">
+              <p>Mississauga, Ontario</p>
+              <p>Greater Toronto Area (GTA)</p>
+              <p style="color: var(--color-taupe); margin-top: 0.5rem;">
+                Tuesday – Saturday · By Appointment Only
+              </p>
+              <p style="font-size: 0.72rem; color: #7E726A; margin-top: 0.35rem;">
+                Private studio address shared upon confirmed deposit reservation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <p>© 2026 Annalia Atelier. All rights reserved.</p>
+          <button id="scrollToTopBtn" class="btn-top" aria-label="Back to top">
+            <span>Back to top</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================================
+         9. Modals (Lightbox, Booking Summary, Settings)
+         ====================================================================== -->
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Nail Set Details">
+      <div class="modal-content-box">
+        <button id="closeLightboxBtn" class="modal-close-btn" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="modal-inner-grid">
+          <div class="modal-img-col">
+            <img id="modalImg" src="" alt="Selected nail set">
+          </div>
+          <div class="modal-info-col">
+            <div>
+              <div id="modalCategory" class="section-eyebrow" style="color: var(--color-taupe); margin-bottom: 0.25rem;"></div>
+              <h3 id="modalTitle" style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--color-espresso); margin-bottom: 0.65rem;"></h3>
+              <p id="modalDesc" style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+
+              <div style="border-top: 1px solid var(--color-sand); padding-top: 0.75rem;">
+                <div class="modal-spec-row">
+                  <span class="spec-label">Shape:</span>
+                  <span id="modalShape" class="spec-val"></span>
+                </div>
+                <div class="modal-spec-row">
+                  <span class="spec-label">Length:</span>
+                  <span id="modalLength" class="spec-val"></span>
+                </div>
+                <div class="modal-spec-row" style="flex-direction: column; gap: 0.25rem;">
+                  <span class="spec-label">Technique & Materials:</span>
+                  <span id="modalTechnique" class="spec-val" style="margin-top: 0.15rem;"></span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--color-sand);">
+              <button id="requestStyleBtn" class="btn-primary" style="width: 100%; text-align: center;">
+                <span>Request This Look</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Summary Modal -->
+    <div id="summaryModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Appointment Summary Ready">
+      <div class="modal-content-box" style="max-width: 520px; padding: 2rem;">
+        <button id="closeSummaryBtn" class="modal-close-btn" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="section-eyebrow" style="color: var(--color-taupe); margin-bottom: 0.25rem;">Inquiry Prepared</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-espresso); margin-bottom: 0.65rem;">
+          Appointment Summary Ready
+        </h3>
+        <p style="font-size: 0.78rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          Here is your complete booking summary. You can copy it to direct message <strong>@annalia.atelier</strong> on Instagram, or proceed to the booking portal.
+        </p>
+
+        <!-- Summary Details Box -->
+        <div style="background-color: var(--color-ivory); border: 1px solid var(--color-sand); padding: 1rem; border-radius: 2px; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <div class="modal-spec-row"><span class="spec-label">Client:</span><span id="sumClient" class="spec-val"></span></div>
+          <div class="modal-spec-row"><span class="spec-label">Contact:</span><span id="sumContact" class="spec-val"></span></div>
+          <div class="modal-spec-row"><span class="spec-label">Service:</span><span id="sumService" class="spec-val"></span></div>
+          <div class="modal-spec-row"><span class="spec-label">Shape & Length:</span><span id="sumShape" class="spec-val"></span></div>
+          <div class="modal-spec-row"><span class="spec-label">Preferred Slot:</span><span id="sumSlot" class="spec-val"></span></div>
+          <div style="font-size: 0.75rem;"><span class="spec-label" style="display: block; margin-bottom: 0.2rem;">Design Notes:</span><span id="sumNotes" class="spec-val" style="font-style: italic;"></span></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+          <button id="copySummaryBtn" class="btn-secondary" style="width: 100%;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Summary for Instagram DM</span>
+          </button>
+          <a href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" class="btn-primary js-booking-link" style="width: 100%; text-align: center;">
+            <span>Open Annalia's Booking Portal</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Destination Settings Modal -->
+    <div id="settingsModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Configure Booking Destination">
+      <div class="modal-content-box" style="max-width: 460px; padding: 2rem;">
+        <button id="closeSettingsBtn" class="modal-close-btn" aria-label="Close dialog">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="section-eyebrow" style="color: var(--color-taupe); margin-bottom: 0.25rem;">Owner Configuration</div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-espresso); margin-bottom: 0.5rem;">
+          Configure Booking Destination
+        </h3>
+        <p style="font-size: 0.78rem; color: var(--color-muted); line-height: 1.55; margin-bottom: 1.25rem;">
+          Specify where clients are directed when clicking &ldquo;Book an Appointment&rdquo; (e.g. your Beacons page, Square Appointments, Fresha, or Instagram DM link).
+        </p>
+
+        <form id="settingsForm">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" for="settingsUrlInput">Live Booking URL</label>
+            <input type="url" id="settingsUrlInput" class="form-input" placeholder="https://beacons.ai/annalia.atelier" required>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; margin-bottom: 1.5rem;">
+            <button type="button" id="resetSettingsUrlBtn" style="color: var(--color-muted); text-decoration: underline;">
+              Reset to verified Beacons URL
+            </button>
+            <a id="testSettingsUrlLink" href="https://beacons.ai/annalia.atelier" target="_blank" rel="noopener noreferrer" style="color: var(--color-espresso); font-weight: 500; display: inline-flex; align-items: center; gap: 0.25rem;">
+              <span>Test Link</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+            <button type="button" id="cancelSettingsBtn" class="btn-secondary" style="padding: 0.5rem 1rem;">Cancel</button>
+            <button type="submit" class="btn-primary" style="padding: 0.5rem 1rem;">Save Destination</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastNotice" class="toast-notice">Action successful!</div>
+
+    <!-- Pure Standalone JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
